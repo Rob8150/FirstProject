@@ -1,29 +1,47 @@
-fun printMessage(message: String): Unit {                               // 1
-    println(message)
-}
 
-fun printMessageWithPrefix(message: String, prefix: String = "Info") {  // 2
-    println("[$prefix] $message")
-}
-
-fun sum(x: Int, y: Int): Int {                                          // 3
-    return x + y
-}
-
-fun multiply(x: Int, y: Int) = x * y
+import java.time.LocalDateTime
 
 fun main(args: Array<String>) {
 
-    println("Whats your name?")
-    val name = readln()
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    //println("Program arguments: ${args.joinToString()}")
-    println("Hello, $name!")
+    val Name : String = "Robert Clark"
+    val GitCode : String = "ghp_nufsdjiowjieoijiojwdsjsdhkjhjfjhhds"
+    val SSH : String = "robert_clark_1967@34.129.54.75"
+    val Project : String = "FirstProject"
+    val Year : String = "2022"
+    val Month : String = "1"
+    val Day : String = "9"
 
-    printMessage("Hello")                                               // 5
-    printMessageWithPrefix("Hello", "Log")                 // 6
-    printMessageWithPrefix("Hello")                             // 7
-    printMessageWithPrefix(prefix = "Log", message = "Hello")          // 8
-    println(sum(1, 2))                                             // 9
-    println(multiply(2, 4))
+    val current = LocalDateTime.now()
+    println("Date and Time is: $current Kotlin V1.0.1")
+    println("Welcome $Name you are working on project $Project")
+    println(".git.json")
+    println("----GO MOD --------------------------------------")
+    println("")
+    println("cd ~/gocode/src/github.com/Rob8150/$Project")
+    println("go mod init github.com/Rob8150/$Project")
+    println("go get github.com/charmbracelet/lipgloss")
+    println("")
+    println("----GitHub---------------------------------------")
+    println("git branch -m master main")
+    println("git remote remove origin")
+    println("git remote add origin https://$GitCode@github.com/Rob8150/$Project")
+    println("git push --set-upstream origin main")
+    println("")
+    println("--ZIP--------------------------------------------")
+    println("")
+    println("cd gocode/src/github.com/Rob8150/")
+    println("tar -cvzf $Project.tar.gz $Project")
+    println("")
+    println("-----Upstream ------------------------------------")
+    println("scp ~/gocode/src/github.com/Rob8150/$Project.tar.gz $SSH:gocode/src/github.com/Rob8150/$Project.tar.gz")
+    println("")
+    println("-----Transport Remote-----------------------------")
+    println("")
+    println("-----DownStream-----------------------------------")
+    println("scp $SSH:gocode/src/github.com/Rob8150/$Project.tar.gz ~/gocode/src/github.com/Rob8150/$Project.tar.gz")
+    println("ssh $SSH")
+    println("cd ~/gocode/src/github.com/Rob8150/")
+    println("Extract")
+    println("tar -zxvf $Project.tar.gz")
+
 }
